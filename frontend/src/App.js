@@ -10,11 +10,12 @@ import Staff_dashboard from './components/dashboard/staff_dashboard';
 import Student_dashboard from './components/dashboard/student_dashboard';
 import Dashboard from './components/dashboard/dashboard';
 import Support from './components/table/support';
-
+import { UserProvider } from './components/dashboard/UserProvider';
 
 function App() {
   return (
     <BrowserRouter>
+    <UserProvider>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard/admin_dashboard" element={<Admin_dashboard />} />
@@ -37,6 +38,7 @@ function App() {
         <Route path="/dashboard/student_dashboard/support" element={<Dashboard />} />
         <Route path="/support" element={<Support />} />
       </Routes>
+      </UserProvider>
     </BrowserRouter>
   );
 }
