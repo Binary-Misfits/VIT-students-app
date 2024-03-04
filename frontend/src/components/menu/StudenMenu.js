@@ -1,6 +1,6 @@
 import React from 'react'
 import attendance_img from './img/attendance_img.svg'
-// import special_request_img from './img/special_request_img.svg'
+import special_request_img from './img/special_request_img.svg'
 import support_img from './img/support_img.svg'
 import notice_img from './img/notice_img.svg'
 import review_img from './img/review_img.svg'
@@ -27,6 +27,12 @@ function StudenMenu() {
                 <div className='cursor-pointer m-4 w-36 h-36  lg:w-[18rem] lg:h-[16rem] shadow-xl rounded-md flex flex-col justify-center items-center'>
                 <img src={review_img} className=' border-[#F9C041] w-24 md:w-[8rem]'></img>
                 <div className='my-2 text-sm md:text-[24px]'>Complaint</div>
+                </div>
+              </Link>
+              <Link to='/dashboard/student_dashboard/suggestion'>
+                <div className='cursor-pointer m-4 w-36 h-36  lg:w-[18rem] lg:h-[16rem] shadow-xl rounded-md flex flex-col justify-center items-center'>
+                <img src={special_request_img} className=' border-[#F9C041] w-24 md:w-[8rem]'></img>
+                <div className='my-2 text-sm md:text-[24px]'>Suggestion</div>
                 </div>
               </Link>
             </div>

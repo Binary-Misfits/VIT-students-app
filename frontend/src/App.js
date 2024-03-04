@@ -15,7 +15,7 @@ import { UserProvider } from './components/dashboard/UserProvider';
 function App() {
   return (
     <BrowserRouter>
-    <UserProvider>
+<UserProvider>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard/admin_dashboard" element={<Admin_dashboard />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/dashboard/student_dashboard" element={<Student_dashboard/>} />
 
         <Route path="/dashboard/admin_dashboard/attendance" element={<Dashboard />} />
-        <Route path="/dashboard/student_dashboard/attendance" element={<Dashboard />} />
+        <Route path="/dashboard/student_dashboard/rulebook" element={<Dashboard />} />
         <Route path="/dashboard/staff_dashboard/attendance" element={<Dashboard />} />
         <Route path="/dashboard/admin_dashboard/review" element={<Dashboard />} />
         <Route path="/dashboard/student_dashboard/complaint" element={<Dashboard />} />
@@ -32,13 +32,15 @@ function App() {
         <Route path="/dashboard/admin_dashboard/complaint" element={<Dashboard />} />
         <Route path="/dashboard/admin_dashboard/notice" element={<Dashboard />} />
         <Route path="/dashboard/staff_dashboard/notice" element={<Dashboard />} />
-        <Route path="/dashboard/student_dashboard/notice" element={<Dashboard />} />
+        <Route path="/dashboard/student_dashboard/event" element={<Dashboard />} />
         <Route path="/dashboard/admin_dashboard/support" element={<Dashboard />} />
         <Route path="/dashboard/staff_dashboard/support" element={<Dashboard />} />
         <Route path="/dashboard/student_dashboard/support" element={<Dashboard />} />
+        <Route path="/dashboard/student_dashboard/suggestion" element={<Dashboard />} />
+        <Route path="/dashboard/student_dashboard/food" element={<Dashboard />} />
         <Route path="/support" element={<Support />} />
       </Routes>
-      </UserProvider>
+</UserProvider>
     </BrowserRouter>
   );
 }
