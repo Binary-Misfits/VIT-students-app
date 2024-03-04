@@ -15,45 +15,45 @@ const smtpConfig = {
 
 const transporter = nodemailer.createTransport(smtpConfig);
 
-const sendComplainEmail = async (complainId, wardenEmail,supervisorEmail, studentName, regid, complainDesc,block,status) => {
+const sendComplainEmail = async (complainId, wardenEmail, supervisorEmail, studentName, regid, complainDesc, block, status) => {
     let message = {
         from: 'sanidhyasahu194@gmail.com',
         to: wardenEmail,
-        cc:supervisorEmail,
+        cc: supervisorEmail,
         subject: `Complain regarding ${block}`,
-        text:`Respected Warden,\n\n ${studentName},${regid} has an complain reagrding ${block}.\n\nComplain : ${complainDesc}.\nComplain ID : ${complainId}.\nComplain Status : ${status} 
+        text: `Respected Warden,\n\n ${studentName},${regid} has an complain reagrding ${block}.\n\nComplain : ${complainDesc}.\nComplain ID : ${complainId}.\nComplain Status : ${status} 
             `
-        
+
     };
 
     transporter.sendMail(message)
         .then(() => {
-            return console.log({ msg: 'Email sent' })
+            return true
         })
         .catch(error => {
-            return console.log({ error })
+            return false
         });
 }
 
-const sendSuggetionEmail = async (studentName, regid, description,title) => {
+const sendSuggetionEmail = async (studentName, regid, description, title) => {
     let message = {
         from: 'sanidhyasahu194@gmail.com',
         to: "sanidhyasahu2022@vitbhopal.ac.in", // Suggestion respective faculty email
-        cc:supervisorEmail,
+        cc: supervisorEmail,
         subject: title,
-        text:`Respected Sir,\n\n ${studentName},${regid} has an suggestion reagrding ${title}.\n\nDescription :${description}
+        text: `Respected Sir,\n\n ${studentName},${regid} has an suggestion reagrding ${title}.\n\nDescription :${description}
             `
-        
+
     };
 
     transporter.sendMail(message)
         .then(() => {
-            return console.log({ msg: 'Email sent' })
+            return true
         })
         .catch(error => {
-            return console.log({ error })
+            return false
         });
 }
 // sendComplainEmail("complain_ID","aneesahu4@gmail.com","sanidhyasahu2022@vitbhopal.ac.in","Sanidhya sahu","22BAI10234","no water in block 1","Boys Hostel Block 1","raised")
 
-module.exports = {sendComplainEmail,sendSuggetionEmail};
+module.exports = { sendComplainEmail, sendSuggetionEmail };
