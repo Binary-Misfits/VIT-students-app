@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Amsterdam";
+    src: ("../src/resource/fonts/Amsterdam.otf");
+}
+@font-face {
+    font-family: "Montserrat";
+    src: ("../src/resource/fonts/Montserrat.ttf");
+}
+@font-face {
+    font-family: "Roboto";
+    src: ("../src/resource/fonts/Roboto.ttf");
+}
+
+@media (min-width: 640px) {
+    table {
+      display: inline-table !important;
+    }
+
+    thead tr:not(:first-child) {
+      display: none;
+    }
+  }
+
+  td:not(:last-child) {
+    border-bottom: 0;
+  }
+
+  th:not(:last-child) {
+    border-bottom: 2px solid rgba(0, 0, 0, .1);
+  }
