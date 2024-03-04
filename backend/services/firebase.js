@@ -1,5 +1,15 @@
-const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
-const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/firestore');
+const {
+  initializeApp,
+  applicationDefault,
+  cert,
+} = require("firebase-admin/app");
+const {
+  getFirestore,
+  Timestamp,
+  FieldValue,
+  Filter,
+} = require("firebase-admin/firestore");
+const { getAUth, createUserWithEmailAndPassword } = require("firebase/auth");
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -16,7 +26,7 @@ const firebaseConfig = {
   storageBucket: "vit-hackathon-beafa.appspot.com",
   messagingSenderId: "33958979958",
   appId: "1:33958979958:web:0a475188b859def063f257",
-  measurementId: "G-BE7E4G356R"
+  measurementId: "G-BE7E4G356R",
 };
 
 // Initialize Firebase
@@ -26,5 +36,5 @@ const analytics = getAnalytics(app);
 initializeApp();
 
 const db = getFirestore();
-
+const auth = getAuth(app);
 module.exports(db);
