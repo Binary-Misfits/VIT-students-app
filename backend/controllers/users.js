@@ -1,8 +1,8 @@
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-import bcrypt from 'bcryptjs';
+const { firebase } = require('../services');
+const { auth } = firebase
+const bcrypt = require('bcryptjs');
  
-const signup(){()=>createUserWithEmailAndPassword(auth, email, password)
+function signup(){()=>createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed up
     const user = userCredential.user;
@@ -14,7 +14,7 @@ const signup(){()=>createUserWithEmailAndPassword(auth, email, password)
     // ..
   });
 }
-const signin(){()=>signInWithEmailAndPassword(auth, email, password)
+function signin(){()=>signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in
     const user = userCredential.user;
@@ -26,4 +26,4 @@ const signin(){()=>signInWithEmailAndPassword(auth, email, password)
   });
 }
 
-module.exports(signin,signup);
+module.exports = { signin, signup };

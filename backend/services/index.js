@@ -1,2 +1,5 @@
-const db = require('./firebase')
-console.log(db);
+const firebase = require('./firebase')
+
+module.exports = {
+    firebase
+}
