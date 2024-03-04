@@ -48,8 +48,8 @@ async function getData() {
         data1.push(tempObject)
     })
 
-    console.log(data1);
+    // console.log(data1);
     return data1
 }
-getData()
+// getData()
 module.exports = getData
