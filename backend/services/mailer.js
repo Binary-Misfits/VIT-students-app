@@ -35,13 +35,13 @@ const sendComplainEmail = async (complainId, wardenEmail, supervisorEmail, stude
         });
 }
 
-const sendSuggetionEmail = async (studentName, regid, description, title) => {
+const sendSuggetionEmail = async (regid, description, title) => {
     let message = {
         from: 'sanidhyasahu194@gmail.com',
         to: "sanidhyasahu2022@vitbhopal.ac.in", // Suggestion respective faculty email
         cc: supervisorEmail,
         subject: title,
-        text: `Respected Sir,\n\n ${studentName},${regid} has an suggestion reagrding ${title}.\n\nDescription :${description}
+        text: `Respected Sir,\n\n ${regid} has an suggestion reagrding ${title}.\n\nDescription :${description}
             `
 
     };
