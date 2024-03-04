@@ -26,4 +26,4 @@ function signin(){()=>signInWithEmailAndPassword(auth, email, password)
   });
 }
 
-module.exports(signin,signup);
+module.exports = { signin, signup };
