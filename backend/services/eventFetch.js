@@ -1,5 +1,5 @@
 const { google } = require("googleapis")
-async function getData() {
+async function getEventData() {
     const auth = new google.auth.GoogleAuth({
         keyFile: "services/credentials.json",
         scopes: "https://www.googleapis.com/auth/spreadsheets"
@@ -52,4 +52,4 @@ async function getData() {
     return data1
 }
 // getData()
-module.exports = getData
+module.exports = getEventData
