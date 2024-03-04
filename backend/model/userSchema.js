@@ -25,6 +25,9 @@ const userSchema = new mongoose.Schema({
     reg_no: {
         type: String,
     },
+    hosteller:{
+        type: Boolean,
+    },
     block: {
         type: String,
 
@@ -55,30 +58,6 @@ const userSchema = new mongoose.Schema({
         type: String,
 
     },
-    complaints: [
-        {
-            complain_id:
-            {
-                type: String,
-        
-            },
-            title:
-            {
-                type: String,
-        
-            },
-            type:
-            {
-                type: String,
-        
-            },
-            Dis:
-            {
-                type: String,
-        
-            },
-        }
-    ],
     tokens: [
         {
             token:
