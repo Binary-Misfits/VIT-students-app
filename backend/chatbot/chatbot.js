@@ -2,8 +2,8 @@ const tf = require('@tensorflow/tfjs-node');
 
 // Load the model architecture and weights
 async function loadModel() {
-    const model = await tf.loadLayersModel('file://path_to_your_model/chatbot_model.json');
-    await model.loadWeights('file://path_to_your_model/chatbot_weights.h5');
+    const model = await tf.loadLayersModel('./backend/chatbot/chatbot_model.json');
+    await model.loadWeights('./backend/chatbot/chatbot_weights.h5');
     return model;
 }
 
