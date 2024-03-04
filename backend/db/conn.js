@@ -21,7 +21,7 @@ mongoose.connect(DB, {
     // Assuming you're in an Express.js context given the 'res.status(500);'
     // It's best to handle the response within a route or middleware
     console.error(err, `-- Connection Not Established...`);
-    if (res) {
-        res.status(500).send("Failed to connect to the database.");
-    }
+    // if (res) {
+    //     res.status(500).send("Failed to connect to the database.");
+    // }
 });
