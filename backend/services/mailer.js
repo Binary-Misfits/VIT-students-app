@@ -26,12 +26,12 @@ const sendComplainEmail = async (complainId, wardenEmail,supervisorEmail, studen
         
     };
 
-    transporter.sendMail(message)
+    await transporter.sendMail(message)
         .then(() => {
-            return console.log({ msg: 'Email sent' })
+            return true
         })
         .catch(error => {
-            return console.log({ error })
+            return false
         });
 }
 
