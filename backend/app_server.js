@@ -137,17 +137,13 @@ app.get('/api/v1/suggestions', async (req, res) => {
 });
 app.delete('/api/v1/suggestions/:id', async (req, res) => {
     const { id } = req.params;
-app.delete('/api/v1/suggestions/:id', async (req, res) => {
-    const { id } = req.params;
     console.log(req);
     // const reg = req.body;
     const post = await Suggestion.findById(id);
     if (req.reg === post.reg) {
         await Suggestion.findByIdAndRemove(id);
         return res.status(200).json({ message: "Deleted Successfully" });
-        return res.status(200).json({ message: "Deleted Successfully" });
     }
-    return res.status(401).json({ message: "Unauthenticated to delete." });
     return res.status(401).json({ message: "Unauthenticated to delete." });
 });
 app.get('/api/v1/events', async (req, res) => {
